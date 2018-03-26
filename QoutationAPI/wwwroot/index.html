@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Quotation</title>
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/site.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h1>Список цитат</h1>
+        <div id="errors" class="alert alert-danger" style="display:none;"></div>
+        <form name="quoteForm" id="quoteForm">
+            <input type="hidden" name="id" value="0" />
+            <input type="hidden" name="datecreate" />
+            <div class="form-group">
+                <label for="author">Автор:</label>
+                <input class="form-control" name="author" />
+            </div>
+            <div class="form-group">
+                <label for="text">Текст:</label>
+                <textarea class="form-control" name="text" ></textarea>
+            </div>
+            <div class="form-group">
+                <label for="category">Категория:</label>
+                <select class="form-control" name="category"></select>
+            </div>
+            <div class="panel-body">
+                <button type="submit" class="btn btn-sm btn-primary">Сохранить</button>
+                <a id="reset" class="btn btn-sm btn-primary">Сбросить</a>
+            </div>
+        </form>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Автор (Сортировка <button class="sortquote" value="asc">ASC</button><button class="sortquote" value="desc">DESC</button>)</th>
+                    <th>Текст</th>
+                    <th>Дата создания</th>
+                    <th>Категория</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/momentjs/min/moment-with-locales.min.js"></script>
+    <script src="js/site.js"></script>
+</body>
+</html>
